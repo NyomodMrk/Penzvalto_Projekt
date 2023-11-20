@@ -1,0 +1,122 @@
+{
+    "valuta": [
+        {
+            "id": 1,
+            "valuta": "EUR",
+            "arfolyam": 390
+        },
+        {
+            "id": 2,
+            "valuta": "USD",
+            "arfolyam": 357
+        },
+        {
+            "id": 3,
+            "valuta": "GBP",
+            "arfolyam": 445
+        },
+        {
+            "id": 4,
+            "valuta": "AUD",
+            "arfolyam": 234
+        },
+        {
+            "id": 5,
+            "valuta": "BGN",
+            "arfolyam": 204
+        },
+        {
+            "id": 6,
+            "valuta": "CAD",
+            "arfolyam": 261
+        },
+        {
+            "id": 7,
+            "valuta": "CHF",
+            "arfolyam": 405
+        },
+        {
+            "id": 8,
+            "valuta": "CNY",
+            "arfolyam": 48
+        },
+        {
+            "id": 9,
+            "valuta": "CZK",
+            "arfolyam": 16
+        },
+        {
+            "id": 10,
+            "valuta": "DKK",
+            "arfolyam": 50
+        },
+        {
+            "id": 11,
+            "valuta": "JPY",
+            "arfolyam": 241
+        },
+        {
+            "id": 12,
+            "valuta": "MXN",
+            "arfolyam": 20
+        },
+        {
+            "id": 13,
+            "valuta": "NOK",
+            "arfolyam": 33
+        },
+        {
+            "id": 14,
+            "valuta": "NZD",
+            "arfolyam": 208
+        },
+        {
+            "id": 15,
+            "valuta": "PLN",
+            "arfolyam": 91
+        },
+        {
+            "id": 16,
+            "valuta": "RON",
+            "arfolyam": 80
+        },
+        {
+            "id": 17,
+            "valuta": "RSD",
+            "arfolyam": 3
+        },
+        {
+            "id": 18,
+            "valuta": "RUB",
+            "arfolyam": 4
+        },
+        {
+            "id": 19,
+            "valuta": "SEK",
+            "arfolyam": 34
+        },
+        {
+            "id": 20,
+            "valuta": "TRY",
+            "arfolyam": 12
+        },
+        {
+            "id": 21,
+            "valuta": "UAH",
+            "arfolyam": 10
+        },
+        {
+            "id": 22,
+            "valuta": "ZAR",
+            "arfolyam": 19
+        },
+        {
+            "id": 23,
+            "valuta": "HUF",
+            "arfolyam": 1
+        }
+    ],
+    "total": 100,
+    "skip": 0,
+    "limit": 23
+}
