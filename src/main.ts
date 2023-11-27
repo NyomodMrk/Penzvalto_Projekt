@@ -1,24 +1,29 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import { valutak } from "./valuta.ts";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+async function betoltes() {
+  let eredmeny = await fetch('valuta.json');
+  if (!eredmeny.ok) {
+    throw new Error('Hiba történt a letöltés közben');
+  }
+  return await eredmeny.json() as valutak;
+}
+
+async function init(){
+  let tartalom = await betoltes();
+  const tbody= document.getElementById("tablebody");
+  for(const t of tartalom.valutak){
+    const row = document.createElement("tr");
+    const cell1 = document.createElement("td");
+    const cell2 = document.createElement("td");
+    const celltext1 = document.createTextNode(t.valuta);
+    const celltext2 = document.createTextNode(t.arfolyam.toString());
+    cell1.appendChild(celltext1);
+    cell2.appendChild(celltext2);
+    row.appendChild(cell1);
+    row.appendChild(cell2);
+    tbody?.appendChild(row);
+  }
+}
+
+document.addEventListener("DOMContentLoaded",init);
