@@ -44,6 +44,6 @@ async function Valtas(){
       seged = seged/t.arfolyam;
     }
   }
-  eredmeny!.textContent=seged.toString();
+  eredmeny!.textContent="Az átváltott összeg: "+(Math.round(seged*100)/100).toString()+" "+mire;
 }
 document.addEventListener("DOMContentLoaded",init);

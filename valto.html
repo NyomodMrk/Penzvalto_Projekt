@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pénz Váltó</title>
 </head>
-<body>
-    <div class="p-5 bg-success text-white text-center">
+<body style="background-image: url(public/volume-abstract-graphic-loneliness-desk.jpg);">
+    <div class="p-5 text-white text-center" style="background-image: url(./public/valutas.jpeg);">
         <h1>Pénz Váltó</h1>
     </div>
 
@@ -32,8 +32,8 @@
                 <div class="col-sm-4"><input list="mirol" id="mirol_input"></div>
                 <datalist id="mirol"></datalist>
             </div>
-            <div class="col-sm-4">
-                <p>foto</p>
+            <div class="col-sm-4 text-center">
+                <img src="./public/clipart2093805.png" height="100px"></img>
             </div>
             <div class="col-sm-4">
                 <h2>Mire szeretne átváltani?</h2>
@@ -41,34 +41,19 @@
                 <datalist id="mire"></datalist>
             </div>
         </div>
-        <div class="container mt-0">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-sm-4"></div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 text-center">
                     <input type="number" id="osszeg">
                     <button id="valtas">Valtas</button>
-                    <p id="eredmeny"></p>
+                    <div class="text-center"><h4><p id="eredmeny"></p></h4></div>
                 </div>
                 <div class="col-sm-4"></div>
             </div>
         </div>
 
     </div>
-    <!--<div class="row">
-        <label>
-            Miről Szeretne váltani:
-            <input list="mirol" id="mirol_input">
-            <datalist id="mirol"></datalist>
-        </label>
-        <label>
-            Mire szeretne váltani:
-            <input list="mire" id="mire_input">
-            <datalist id="mire"></datalist>
-        </label>
-        <input type="number" id="osszeg">
-        <button id="valtas">Valtas</button>
-        <p id="eredmeny"></p>
-    </div>-->
     <script type="module" src="./src/valto.ts"></script>
 </div>
 </body>
