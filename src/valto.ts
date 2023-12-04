@@ -32,7 +32,7 @@ async function Valtas(){
   let seged = 0;
   const mirol = (document.getElementById("mirol_input")as HTMLInputElement)!.value;
   const mire  = (document.getElementById("mire_input") as HTMLInputElement)!.value;
-  const osszeg = (document.getElementById("osszzeg") as HTMLInputElement)!.value;
+  const osszeg = (document.getElementById("osszeg") as HTMLInputElement)!.value;
   const eredmeny = document.getElementById("eredmeny");
   for(const t of tartalom.valutak){
     if(t.valuta==mirol){

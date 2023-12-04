@@ -33,11 +33,16 @@ async function init(){
   document.getElementById("seartch")!.addEventListener("click",Kereses)
 }
 function Kereses() {
-  //const table= document.getElementById("table");
-  //const kereses_input = 
-  //for(const t of table!.children){
-    
-  //}
+  let seged=0;
+  const table= document.getElementById("tablebody");
+  const kereses_input = (document.getElementById("kereses_input") as HTMLInputElement)!.value;
+  for(const t of table!.children){
+    if(kereses_input==t.children[0].textContent){
+      (table!.children[seged] as HTMLElement).style.backgroundColor ='red';
+      console.log(table!.children[seged]);
+      seged++;
+    }
+  }
 }
 
 document.addEventListener("DOMContentLoaded",init);
