@@ -1,7 +1,7 @@
 import { valutak } from "./valuta.ts";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-
+import './style.css';
 
 async function betoltes() {
   let eredmeny = await fetch('valuta.json');
@@ -40,8 +40,14 @@ function Kereses() {
   const kereses_input = (document.getElementById("kereses_input") as HTMLInputElement)!.value;
   for(const t of table!.children){
     if(kereses_input==t.children[0].textContent){
-      (table!.children[seged] as HTMLElement).style.backgroundColor ='red';
+      (table!.children[seged].children[0] as HTMLElement).classList.add("sajat-tablazat");
+      (table!.children[seged].children[1] as HTMLElement).classList.add("sajat-tablazat");
       console.log(table!.children[seged]);
+      seged++;
+    }
+    else{
+      (table!.children[seged].children[0] as HTMLElement).classList.remove("sajat-tablazat");
+      (table!.children[seged].children[1] as HTMLElement).classList.remove("sajat-tablazat");
       seged++;
     }
   }
