@@ -1,4 +1,6 @@
 import { valutak } from "./valuta.ts";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 async function betoltes() {
     let eredmeny = await fetch('valuta.json');

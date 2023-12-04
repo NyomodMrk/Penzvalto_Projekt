@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pénz Váltás</title>
+    <title>Pénz Váltó</title>
 </head>
 <body>
-    <div>
-        <a href="index.html">Fő Oldal</a>
-        <a href="valto.html">Váltó</a>
+    <div class="p-5 bg-success text-white text-center">
+        <h1>Pénz Váltó</h1>
     </div>
-    <div>
+
+    <nav class="navbar navbar-expand-sm bg-secondary navbar dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Fő oldal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="valto.html">Váltó</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <div class="container mt-0">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Miről szeretne átváltani?</h2>
+                <div class="col-sm-4"><input list="mirol" id="mirol_input"></div>
+                <datalist id="mirol"></datalist>
+            </div>
+            <div class="col-sm-4">
+                <p>foto</p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Mire szeretne átváltani?</h2>
+                <div class="col-sm-4"><input list="mire" id="mire_input"></div>
+                <datalist id="mire"></datalist>
+            </div>
+        </div>
+        <div class="container mt-0">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <input type="number" id="osszeg">
+                    <button id="valtas">Valtas</button>
+                    <p id="eredmeny"></p>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+
+    </div>
+    <!--<div class="row">
         <label>
             Miről Szeretne váltani:
             <input list="mirol" id="mirol_input">
@@ -24,7 +68,8 @@
         <input type="number" id="osszeg">
         <button id="valtas">Valtas</button>
         <p id="eredmeny"></p>
-    </div>
-    <script src="./src/valto.ts"></script>
+    </div>-->
+    <script type="module" src="./src/valto.ts"></script>
+</div>
 </body>
 </html>
