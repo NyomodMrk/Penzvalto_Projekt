@@ -25,7 +25,23 @@ async function init() {
   }
   document.getElementById("valtas")!.addEventListener("click",Valtas)
 }
-function Valtas(){
-
+async function Valtas(){
+  let tartalom = await betoltes();
+  let seged = 0;
+  const mirol = (document.getElementById("mirol_input")as HTMLInputElement)!.value;
+  const mire  = (document.getElementById("mire_input") as HTMLInputElement)!.value;
+  const osszeg = (document.getElementById("osszzeg") as HTMLInputElement)!.value;
+  const eredmeny = document.getElementById("eredmeny");
+  for(const t of tartalom.valutak){
+    if(t.valuta==mirol){
+      seged = t.arfolyam*parseInt(osszeg);
+    }
+  }
+  for(const t of tartalom.valutak){
+    if(t.valuta== mire){
+      seged = seged/t.arfolyam;
+    }
+  }
+  eredmeny!.textContent=seged.toString();
 }
 document.addEventListener("DOMContentLoaded",init);

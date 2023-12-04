@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pénz Váltás</title>
 </head>
 <body>
     <div>
@@ -13,15 +13,17 @@
     <div>
         <label>
             Miről Szeretne váltani:
-            <input list="mirol" name="mirol1" id="mirol1">
+            <input list="mirol" id="mirol_input">
             <datalist id="mirol"></datalist>
         </label>
         <label>
             Mire szeretne váltani:
-            <input list="mire" name="mire1" id="mire1">
+            <input list="mire" id="mire_input">
             <datalist id="mire"></datalist>
         </label>
+        <input type="number" id="osszeg">
         <button id="valtas">Valtas</button>
+        <p id="eredmeny"></p>
     </div>
     <script src="./src/valto.ts"></script>
 </body>

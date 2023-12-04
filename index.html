@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Valuták</title>
   </head>
   <body>
     <div>
@@ -12,7 +12,15 @@
       <a href="valto.html">Váltó</a>
     </div>
     <div>
-      <table>
+      <label>
+          Mire szeretne rá keresni:
+          <input list="kereses" id="kereses_input">
+          <datalist id="kereses"></datalist>
+          <button id="seartch">Keresés</button>
+      </label>
+    </div>
+    <div>
+      <table id="table">
         <thead>
           <tr>
             <td>Valuta Neve:</td>

@@ -12,6 +12,12 @@ async function betoltes() {
 async function init(){
   let tartalom = await betoltes();
   const tbody= document.getElementById("tablebody");
+  const kereses = document.getElementById("kereses");
+  for(const t of tartalom.valutak){
+    const elem = document.createElement("option");
+    elem!.textContent=t.valuta;
+    kereses!.appendChild(elem);
+  }
   for(const t of tartalom.valutak){
     const row = document.createElement("tr");
     const cell1 = document.createElement("td");
@@ -24,6 +30,14 @@ async function init(){
     row.appendChild(cell2);
     tbody?.appendChild(row);
   }
+  document.getElementById("seartch")!.addEventListener("click",Kereses)
+}
+function Kereses() {
+  //const table= document.getElementById("table");
+  //const kereses_input = 
+  //for(const t of table!.children){
+    
+  //}
 }
 
 document.addEventListener("DOMContentLoaded",init);
