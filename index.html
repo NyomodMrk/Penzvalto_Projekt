@@ -1,36 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valuták</title>
-  </head>
-  <body>
-    <div>
-      <a href="index.html">Fő Oldal</a>
-      <a href="valto.html">Váltó</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valuták</title>
+</head>
+<body style="background-image: url(public/volume-abstract-graphic-loneliness-desk.jpg);">
+  <div class="p-5 text-white text-center" style="background-image: url(./public/valutas.jpeg);">
+      <h1>Pénz Váltó</h1>
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-secondary navbar dark">
+      <div class="container-fluid">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="index.html">Fő oldal</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="valto.html">Váltó</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <div class="container mt-0">
+    <div class="row">
+      <div>
+        <h3>Mire szeretne rákeresni</h3>
+        <input list="kereses" id="kereses_input">
+        <datalist id="kereses"></datalist>
+        <button id="seartch">Keresés</button>
+      </div>
+
     </div>
-    <div>
-      <label>
-          Mire szeretne rá keresni:
-          <input list="kereses" id="kereses_input">
-          <datalist id="kereses"></datalist>
-          <button id="seartch">Keresés</button>
-      </label>
-    </div>
-    <div>
-      <table id="table">
-        <thead>
-          <tr>
-            <td>Valuta Neve:</td>
-            <td>Valuta árfolyama:</td>
-          </tr>
-        </thead>
-        <tbody id="tablebody">
-        </tbody>
-      </table>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+  </div>
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
+<!--<body>
+  <div>
+    <a href="index.html">Fő Oldal</a>
+    <a href="valto.html">Váltó</a>
+  </div>
+  <div>
+    <label>
+      Mire szeretne rá keresni:
+      <input list="kereses" id="kereses_input">
+      <datalist id="kereses"></datalist>
+      <button id="seartch">Keresés</button>
+    </label>
+  </div>
+  <div>
+    <table id="table">
+      <thead>
+        <tr>
+          <td>Valuta Neve:</td>
+          <td>Valuta árfolyama:</td>
+        </tr>
+      </thead>
+      <tbody id="tablebody">
+      </tbody>
+    </table>
+  </div>
+</body>-->
+
 </html>
