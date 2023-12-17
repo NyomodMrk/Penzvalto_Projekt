@@ -2,6 +2,9 @@ import { valutak } from "./valuta.ts";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
+/**
+ * Az adatok betöltését teszi lehetővé fetch segitségével
+ */
 async function betoltes() {
     let eredmeny = await fetch('valuta.json');
     if (!eredmeny.ok) {
@@ -9,7 +12,9 @@ async function betoltes() {
     }
     return await eredmeny.json() as valutak;
   }
-
+/**
+ * Betölti az adatokat egy változoba majd belehejezi a valutákat a két datalistbe az adatokat
+ */
 async function init() {
   let tartalom = await betoltes();
   const mirol = document.getElementById("mirol");
@@ -27,6 +32,11 @@ async function init() {
   }
   document.getElementById("valtas")!.addEventListener("click",Valtas)
 }
+
+/**
+ * A valtas fügvény az a bekért két valuta közőtt úgy váltja átt az összeget
+ * hogy az első valutáról az adott összeget átváltja forintra majd azután a másik összegre forintról vissza váltja
+ */
 async function Valtas(){
   let tartalom = await betoltes();
   let seged = 0;
@@ -46,4 +56,7 @@ async function Valtas(){
   }
   eredmeny!.textContent="Az átváltott összeg: "+(Math.round(seged*100)/100).toString()+" "+mire;
 }
+/**
+ * betölti az oldalt és meghivja az init függvényt
+ */
 document.addEventListener("DOMContentLoaded",init);

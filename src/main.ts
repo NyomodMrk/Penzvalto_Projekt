@@ -2,7 +2,9 @@ import { valutak } from "./valuta.ts";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './style.css';
-
+/**
+ * Az adatok betöltését teszi lehetővé fetch segitségével
+ */
 async function betoltes() {
   let eredmeny = await fetch('valuta.json');
   if (!eredmeny.ok) {
@@ -10,7 +12,9 @@ async function betoltes() {
   }
   return await eredmeny.json() as valutak;
 }
-
+/**
+ * A betöltés fügvény segitségével lekérdezi az adatok majd azokat egy táblázatba le kreál nekik új sorokat majd abba bele rakja az adott elemek és az belehejezi a táblázatba.
+ */
 async function init(){
   let tartalom = await betoltes();
   const tbody= document.getElementById("tablebody");
@@ -34,6 +38,9 @@ async function init(){
   }
   document.getElementById("seartch")!.addEventListener("click",Kereses)
 }
+/**
+ * A keresés fügvény a táblázatba meg keresi azt a valutát amit a felhasználó a index html be keresni szeretne a táblázaatba majd a megtalálta a táblázatban a hátérszinét pirosra átszinezi
+ */
 function Kereses() {
   let seged=0;
   const table= document.getElementById("tablebody");
@@ -52,5 +59,7 @@ function Kereses() {
     }
   }
 }
-
+/**
+ * betölti az oldalt és meghivja az init függvényt
+ */
 document.addEventListener("DOMContentLoaded",init);
