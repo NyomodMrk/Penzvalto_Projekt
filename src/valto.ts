@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 /**
  * Az adatok betöltését teszi lehetővé fetch segitségével
  */
-async function betoltes() {
+export async function betoltes() {
     let eredmeny = await fetch('valuta.json');
     if (!eredmeny.ok) {
       throw new Error('Hiba történt a letöltés közben');
@@ -15,7 +15,7 @@ async function betoltes() {
 /**
  * Betölti az adatokat egy változoba majd belehejezi a valutákat a két datalistbe az adatokat
  */
-async function init() {
+export async function init() {
   let tartalom = await betoltes();
   const mirol = document.getElementById("mirol");
   const mire = document.getElementById("mire");
@@ -37,7 +37,7 @@ async function init() {
  * A valtas fügvény az a bekért két valuta közőtt úgy váltja átt az összeget
  * hogy az első valutáról az adott összeget átváltja forintra majd azután a másik összegre forintról vissza váltja
  */
-async function Valtas(){
+export async function Valtas(){
   let tartalom = await betoltes();
   let seged = 0;
   const mirol = (document.getElementById("mirol_input")as HTMLInputElement)!.value;

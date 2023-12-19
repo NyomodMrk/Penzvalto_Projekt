@@ -5,7 +5,7 @@ import './style.css';
 /**
  * Az adatok betöltését teszi lehetővé fetch segitségével
  */
-async function betoltes() {
+export async function betoltes() {
   let eredmeny = await fetch('valuta.json');
   if (!eredmeny.ok) {
     throw new Error('Hiba történt a letöltés közben');
@@ -15,7 +15,7 @@ async function betoltes() {
 /**
  * A betöltés fügvény segitségével lekérdezi az adatok majd azokat egy táblázatba le kreál nekik új sorokat majd abba bele rakja az adott elemek és az belehejezi a táblázatba.
  */
-async function init(){
+export async function init(){
   let tartalom = await betoltes();
   const tbody= document.getElementById("tablebody");
   const kereses = document.getElementById("kereses");
@@ -24,6 +24,9 @@ async function init(){
     elem!.textContent=t.valuta;
     kereses!.appendChild(elem);
   }
+  /**
+   * Táblázat lekreálása és fektöltése
+   */
   for(const t of tartalom.valutak){
     const row = document.createElement("tr");
     const cell1 = document.createElement("td");
@@ -41,7 +44,7 @@ async function init(){
 /**
  * A keresés fügvény a táblázatba meg keresi azt a valutát amit a felhasználó a index html be keresni szeretne a táblázaatba majd a megtalálta a táblázatban a hátérszinét pirosra átszinezi
  */
-function Kereses() {
+export function Kereses() {
   let seged=0;
   const table= document.getElementById("tablebody");
   const kereses_input = (document.getElementById("kereses_input") as HTMLInputElement)!.value;
